@@ -70,3 +70,4 @@ filled.data$day <- sapply(filled.data$date, FUN=weekday.or.weekend)
 averages <- aggregate(steps ~ interval + day, data=filled.data, mean)
 ggplot(averages, aes(interval, steps)) + geom_line() + facet_grid(day ~ .) +
     xlab("5-minute interval") + ylab("Number of steps")
+
